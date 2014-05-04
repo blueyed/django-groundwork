@@ -7,25 +7,24 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='django-polls',
+    name='django-groundwork',
     version='0.1',
-    packages=['polls'],
+    packages=['groundwork'],
     include_package_data=True,
-    license='BSD License',  # example license
-    description='A simple Django app to conduct Web-based polls.',
+    license='UNLICENSE',  # example license
+    description='A simple Django wrapper for Zurb Foundation',
     long_description=README,
-    url='http://www.example.com/',
-    author='Your Name',
-    author_email='yourname@example.com',
+    url='https://github.com/dummerbd/django-groundwork',
+    author='Benjamin Dummer',
+    author_email='dummerbd@appstate.edu',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License', # example license
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],

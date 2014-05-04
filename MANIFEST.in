@@ -1,0 +1,4 @@
+include UNLICENSE
+include README.rst
+recursive-include groundwork/static *
+recursive-include groundwork/templates *

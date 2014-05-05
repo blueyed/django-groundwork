@@ -79,3 +79,18 @@ def groundwork_alert(message, level=20):
     return '<div data-alert class="alert-box {0} radius" >\n{1}&nbsp;\n{2}\n{3}</div>'.format(
         alert_class, groundwork_icon(icon, size='20px'), message, 
         '<a href="#" class="close">&times</a>')
+
+
+@register.inclusion_tag('groundwork/_paginator.html', takes_context=True)
+def groundwork_paginator(context):
+    '''
+    Use this tag to insert a paginator control that works with the generic
+    ListView and Paginator classes.
+    '''
+    if not context['is_paginated']:
+        return ''
+
+    return {
+        'page_obj': context['page_obj'],
+        'paginator': context['paginator'],
+    }

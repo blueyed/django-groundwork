@@ -1,5 +1,6 @@
 {% load static %}
 {% load groundwork_tags %}
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -28,6 +29,17 @@
     {% block head_js %}{% endblock head_js %}
 </head>
 <body {% block body_attr %}{% endblock body_attr %}>
+
+    {% block messages %}
+    <!-- Messages -->
+    {% for msg in messages %}
+    <div class="row">
+      {% groundwork_alert msg msg.level %}
+    </div>
+    {% endfor %}
+    <!-- End Messages -->
+    {% endblock messages %}
+
     {# Main content goes here #}
     {% block base_body %}{% endblock base_body %}
 

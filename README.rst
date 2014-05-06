@@ -30,16 +30,6 @@ Quick Start
         'groundwork',
     )
 
-3. Include the groundwork URLConf in your project urls.py like so::
-
-    url(r'^goundwork/', include('groundwork.url')),
-
-4. Start your development server and navigate to localhost:8000/groundwork/icons
-   to see an example foundation page.
-
-5. You can remove the URLConf from step 2 when you want, it is not needed to
-   use this package, it just provides a new example.
-
 Available Tags/Filters
 ----------------------
 To use the Groundwork tags in your template, include at the top::

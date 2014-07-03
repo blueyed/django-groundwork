@@ -58,23 +58,24 @@ def groundwork_alert(message, level=20):
     foundation alert box with appropriate icon and style for the message
     type
     '''
-    icon = 'fi-info'
     alert_class = ''
 
-    if level == constants.INFO:
+    if level == constants.INFO or level == 'info':
         icon = 'fi-info'
-    if level == constants.DEBUG:
+    elif level == constants.DEBUG or level == 'debug':
         icon = 'fi-alert'
         alert_class = 'info'
-    if level == constants.SUCCESS:
+    elif level == constants.SUCCESS or level == 'success':
         icon = 'fi-check'
         alert_class = 'success'
-    if level == constants.WARNING:
+    elif level == constants.WARNING or level == 'warning':
         icon = 'fi-alert'
         alert_class = 'warning'
-    if level == constants.ERROR:
+    elif level == constants.ERROR or level == 'error':
         icon = 'fi-x'
         alert_class = 'warning'
+    else:
+        icon = 'fi-info'
 
     return '<div data-alert class="alert-box {0} radius" >\n{1}&nbsp;\n{2}\n{3}</div>'.format(
         alert_class, groundwork_icon(icon, size='20px'), message, 

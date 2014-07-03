@@ -78,7 +78,7 @@ def groundwork_alert(message, level=20):
         icon = 'fi-info'
 
     return '<div data-alert class="alert-box {0} radius" >\n{1}&nbsp;\n{2}\n{3}</div>'.format(
-        alert_class, groundwork_icon(icon, size='20px'), message, 
+        alert_class, groundwork_icon(icon, size='larger'), message,
         '<a href="#" class="close">&times</a>')
 
 
